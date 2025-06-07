@@ -20,6 +20,18 @@ export class ErrorInterceptorService implements HttpInterceptor {
   }
 
   private handleError(error: HttpErrorResponse) {
+    if (error.status === 400) {
+      const dialogData: DialogData = {
+        status: error.status,
+        statusText: error.statusText,
+        message: "Email or password invalid. Try again."
+      }
+
+      this.alert
+        .showError(dialogData)
+        .subscribe();
+    }
+
     if(error.status === 401) {
       const dialogData: DialogData = {
         status: error.status,
