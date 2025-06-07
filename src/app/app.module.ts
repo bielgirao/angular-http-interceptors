@@ -15,6 +15,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { LoaderInterceptorService } from "./services/loader-interceptor.service";
+import { TokenInterceptorService } from "./services/token-interceptor.service";
+import { ErrorInterceptorService } from "./services/error-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -35,9 +37,9 @@ import { LoaderInterceptorService } from "./services/loader-interceptor.service"
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true },
   ],
   bootstrap: [AppComponent]
 })
