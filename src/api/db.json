@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "tets@mail.com",
+      "password": "$2a$10$j8S.cwmFbu2nQouoB9cuUu1wnlotaTI5FlqxNBNVTuQb3wEtcghbu",
+      "firstname": "test",
+      "age": 29,
+      "id": 1
+    }
+  ],
+  "books": [
+    {
+      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "author": "Robert C. Martin",
+      "id": 1
+    },
+    {
+      "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+      "author": "Robert C. Martin",
+      "id": 2
+    },
+    {
+      "title": "Harry Potter",
+      "author": "JK Rowling",
+      "id": 3
+    }
+  ]
+}
